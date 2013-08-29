@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Omrails</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+  		<title>Omrails</title>
+  		<%= stylesheet_link_tag    "application", :media => "all" %>
+ 		 <%= javascript_include_tag "application" %>
+ 		 <%= csrf_meta_tags %>
+	</head>
+				<body>
+				
+<div class="container">
+	<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+ 
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+ 
+      <!-- Be sure to leave the brand out there if you want it shown -->
+      <a class="brand" href="#">SUSHI-FUSION</a>
+ 
+      <!-- Everything you want hidden at 940px or less, place within here -->
+      <div class="nav-collapse collapse">
+        	<ul class="nav">
+        	<li><%= link_to "Home", root_path %></li>
+					<li><%= link_to "About", about_path %></li>
 
+				</ul>
+				<ul class="nav pull-right">
+        	
+					<li><%= link_to "Login" %></li>
+					
+				</ul>
+      </div>
+ 
+    </div>
+  </div>
+</div>
 <%= yield %>
 
+<div class="footer">
+	<small>
+		<%= link_to "SUSHI-FUSION", "http://sushi-fusion.com" %>
+		By Lucas Warat
+	</small>
+	</div>
+</div>
 </body>
 </html>
